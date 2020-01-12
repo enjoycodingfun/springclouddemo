@@ -6,15 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eurekaserver" />
         <module name="gateway" />
         <module name="provider" />
+        <module name="feign" />
+        <module name="eurekaserver" />
+        <module name="consumer" />
+        <module name="Feign" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Feign" options="-parameters" />
+      <module name="consumer" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="feign" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="provider" options="-parameters" />
     </option>
